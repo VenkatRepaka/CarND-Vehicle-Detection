@@ -14,6 +14,7 @@ from vehicle_detection.lesson_functions import *
 # for scikit-learn >= 0.18 use:
 from sklearn.model_selection import train_test_split
 # from sklearn.cross_validation import train_test_split
+import pickle
 
 
 # Define a function to extract features from a single image window
@@ -192,6 +193,16 @@ hot_windows = search_windows(image, windows, svc, X_scaler, color_space=color_sp
                              hist_feat=hist_feat, hog_feat=hog_feat)
 
 window_img = draw_boxes(draw_image, hot_windows, color=(0, 0, 255), thick=6)
+
+dist_pickle = {}
+dist_pickle["svc"] = svc
+dist_pickle["scaler"] = X_scaler
+dist_pickle["orient"] = orient
+dist_pickle["pix_per_cell"] = pix_per_cell
+dist_pickle["cell_per_block"] = cell_per_block
+dist_pickle["spatial_size"] = spatial_size
+dist_pickle["hist_bins"] = hist_bins
+pickle.dump(dist_pickle, open("svc_pickle.p", "wb"))
 
 plt.imshow(window_img)
 plt.show()
