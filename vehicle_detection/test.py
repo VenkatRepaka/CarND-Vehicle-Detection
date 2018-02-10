@@ -14,7 +14,6 @@ from vehicle_detection.lesson_functions import *
 # for scikit-learn >= 0.18 use:
 from sklearn.model_selection import train_test_split
 # from sklearn.cross_validation import train_test_split
-import pickle
 
 
 # Define a function to extract features from a single image window
@@ -100,19 +99,21 @@ def search_windows(img, windows, clf, scaler, color_space='RGB',
     return on_windows
 
 
-# Read in car and non-car images
+# Read in cars and notcars
 cars = []
 notcars = []
-car_images = glob.glob('../vehicles_smallset/**/*.jpeg')
-non_car_images = glob.glob('../non-vehicles_smallset/**/*.jpeg')
+car_images = glob.glob('../vehicles/**/*.png')
+non_car_images = glob.glob('../non-vehicles/**/*.png')
 for image in car_images:
     cars.append(image)
 for image in non_car_images:
     notcars.append(image)
+print(len(car_images))
+print(len(non_car_images))
 
 # Reduce the sample size because
 # The quiz evaluator times out after 13s of CPU time
-sample_size = 500*4
+sample_size = 500
 cars = cars[0:sample_size]
 notcars = notcars[0:sample_size]
 
@@ -193,16 +194,6 @@ hot_windows = search_windows(image, windows, svc, X_scaler, color_space=color_sp
                              hist_feat=hist_feat, hog_feat=hog_feat)
 
 window_img = draw_boxes(draw_image, hot_windows, color=(0, 0, 255), thick=6)
-
-dist_pickle = {}
-dist_pickle["svc"] = svc
-dist_pickle["scaler"] = X_scaler
-dist_pickle["orient"] = orient
-dist_pickle["pix_per_cell"] = pix_per_cell
-dist_pickle["cell_per_block"] = cell_per_block
-dist_pickle["spatial_size"] = spatial_size
-dist_pickle["hist_bins"] = hist_bins
-pickle.dump(dist_pickle, open("svc_pickle.p", "wb"))
 
 plt.imshow(window_img)
 plt.show()
