@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TkAgg')
 import pickle
 from vehicle_detection.lesson_functions import *
 import numpy as np
@@ -29,7 +31,7 @@ draw_image = np.copy(image)
 image = image.astype(np.float32)/255
 
 windows = slide_window(image, x_start_stop=[None, None], y_start_stop=y_start_stop,
-                       xy_window=(128, 128), xy_overlap=(0.85, 0.85))
+                       xy_window=(100, 85), xy_overlap=(0.75, 0.75))
 
 hot_windows = search_windows(image, windows, svc, X_scaler, color_space=color_space,
                              spatial_size=spatial_size, hist_bins=hist_bins,

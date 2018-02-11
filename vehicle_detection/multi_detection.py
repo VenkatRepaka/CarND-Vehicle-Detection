@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
@@ -85,10 +87,10 @@ def find_cars(img, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell, ce
 
 
 ystart = 400
-ystop = 656
-scale = 1.5
+ystop = 650
+scale = 2
 
-images = glob.glob('../test_images/test6.jpg')
+images = glob.glob('../test_images/test*.jpg')
 for image in images:
     img = mpimg.imread(image)
     out_img = find_cars(img, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell, cell_per_block, spatial_size,
