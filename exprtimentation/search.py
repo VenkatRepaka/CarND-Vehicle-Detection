@@ -1,7 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import pickle
-from vehicle_detection.lesson_functions import *
+from exprtimentation.lesson_functions import *
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -15,7 +15,7 @@ cell_per_block = classifier_pickle["cell_per_block"]
 spatial_size = classifier_pickle["spatial_size"]
 hist_bins = classifier_pickle["hist_bins"]
 
-color_space = 'YCrCb'  # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
+color_space = 'YUV'  # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
 hog_channel = 'ALL'  # Can be 0, 1, 2, or "ALL"
 spatial_feat = True  # Spatial features on or off
 hist_feat = True  # Histogram features on or off

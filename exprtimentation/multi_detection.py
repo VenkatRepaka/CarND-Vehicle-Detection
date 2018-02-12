@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pickle
 import cv2
-from vehicle_detection.lesson_functions import *
+from exprtimentation.lesson_functions import *
 import glob
 
 classifier_pickle = pickle.load(open('classifier.p', 'rb'))

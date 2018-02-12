@@ -11,6 +11,8 @@ def convert_color(img, conv='RGB2YCrCb'):
         return cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
     if conv == 'RGB2LUV':
         return cv2.cvtColor(img, cv2.COLOR_RGB2LUV)
+    if conv == 'RGB2YUV':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
 
 
 # Define a function to return HOG features and visualization
@@ -250,13 +252,13 @@ def search_windows(img, windows, clf, scaler, color_space='RGB',
     return on_windows
 
 
-def find_cars(img, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell, cell_per_block, spatial_size, hist_bins):
+def find_cars(img, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell, cell_per_block, spatial_size, hist_bins, conv='RGB2YCrCb'):
     hot_windows = []
     draw_img = np.copy(img)
     img = img.astype(np.float32) / 255
 
     img_tosearch = img[ystart:ystop, :, :]
-    ctrans_tosearch = convert_color(img_tosearch, conv='RGB2YCrCb')
+    ctrans_tosearch = convert_color(img_tosearch, conv=conv)
     if scale != 1:
         imshape = ctrans_tosearch.shape
         ctrans_tosearch = cv2.resize(ctrans_tosearch, (np.int(imshape[1] / scale), np.int(imshape[0] / scale)))

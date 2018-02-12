@@ -1,7 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import pickle
-from vehicle_detection.lesson_functions import *
+from exprtimentation.lesson_functions import *
 import glob
 import matplotlib.pyplot as plt
 from scipy.ndimage.measurements import label
