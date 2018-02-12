@@ -40,6 +40,16 @@ Below is a sample of a non car and hog features
 ![car_hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/non_car_hog.png)
 
 ### Classifier
+I have used LinearSVC as classifier for the project. The training process is part of [classifier.py](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vehicle_detection/classifier.py)
+The classifier data is stored in classifier.p using pickle.
+
+Below are the predictions of classifier on test images with ystart 400, ystop 650 and scale 1.5
+![test1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test1.png)
+![test2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test2.png)
+![test3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test3.png)
+![test4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test4.png)
+![test5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test5.png)
+![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test6.png)
 
 
 ### Sliding Window search
