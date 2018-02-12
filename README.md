@@ -18,14 +18,26 @@ The goals / steps of this project are the following:
 ### Loading Data
 The code for loading the image data to train the classifier is present in classifier.py.
 Sample image of a car and a non car
+![car_and_non_car](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/car_and_non_car.png)
 
 
 ### Hog Parameters
 Below are the final HOG parameters that I have chosen which gave the best accuracy.
 
-| Parameter      | Value |
-|----------------|-------|
-| color-space    | YCrCb |
+| Parameter      | Value     |
+|----------------|-----------|
+| Color Space    | YCrCb     |
+| Spatial Size   | 32 X 32   |
+| Histogram Bins | 32        |
+| Hog Pixels     | 8         |
+| Hog Cells      | 2         |
+| Hog Channel    | ALL       |
+
+Below is a sample of a car and hog features
+![car_hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/car_hog.png)
+
+Below is a sample of a non car and hog features
+![car_hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/non_car_hog.png)
 
 ### Classifier
 
