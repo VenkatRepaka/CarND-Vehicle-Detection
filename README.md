@@ -71,6 +71,10 @@ scale = 1.8
 ystart = 350
 ystop = 700
 scale = 2.5
+
+ystart = 350
+ystop = 700
+scale = 3
 ~~~
 
 ![heatmap1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test1.png)
