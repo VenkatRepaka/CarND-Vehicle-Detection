@@ -80,3 +80,9 @@ scale = 2.5
 ![heatmap5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test5.png)
 ![heatmap6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test6.png)
 
+
+#### Discussion
+Many of the bounding boxes are not completely enclosing the cars in the video. Changing the thresholding will help but this is increasing the false positives.
+
+The speed of the process involved here is extremely slow.
+
