@@ -22,6 +22,7 @@ Sample image of a car and a non car
 
 ### Hog Parameters
 Below are the final HOG parameters that I have chosen which gave the best accuracy.
+
 | Parameter      | Value |
 |----------------|-------|
 | color-space    | YCrCb |
