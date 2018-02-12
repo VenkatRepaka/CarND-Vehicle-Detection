@@ -52,7 +52,13 @@ Below are the predictions of classifier on test images with ystart 400, ystop 65
 ![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test6.png)
 
 
-### Sliding Window search
+### Image pipeline
+![heatmap1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test1.png)
+![heatmap2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test2.png)
+![heatmap3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test3.png)
+![heatmap4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test4.png)
+![heatmap5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test5.png)
+![heatmap6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test6.png)
 
 
 #### Feature Extraction
