@@ -51,6 +51,16 @@ I have used the code from lecture videos.
 For Hog feature extraction I have used skimage.feature.hog. I have chosen YCrCb color space 
 
 #### Classifier
+I have used LinearSVC as classifier for the project. The training process is part of [classifier.py](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vehicle_detection/classifier.py)
+The classifier data is stored in classifier.p using pickle.
+
+Below are the predictions of classifier on test images with ystart 400, ystop 650 and scale 1.5
+![test1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test1.png)
+![test2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test2.png)
+![test3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test3.png)
+![test4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test4.png)
+![test5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test5.png)
+![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test6.png)
 
 
 #### Sliding Search
