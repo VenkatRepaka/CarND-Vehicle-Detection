@@ -6,7 +6,7 @@ import pickle
 
 # global svc, X_scaler,orient, pix_per_cell, cell_per_block, spatial_size, hist_bins, ystart, ystop
 test_images = glob.glob('../test_images/*.jpg')
-dist_pickle = pickle.load( open("model_params.p", "rb"))
+dist_pickle = pickle.load(open("./model_params.p", "rb"))
 svc = dist_pickle["svc"]
 X_scaler = dist_pickle["scaler"]
 orient = dist_pickle["orient"]
@@ -39,5 +39,5 @@ for img in test_images:
     ax1.set_title('Detections', fontsize=50)
     ax2.imshow(heatmap, cmap='hot')
     ax2.set_title('Heatmap', fontsize=50)
-    plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
+    # plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
     plt.show()
