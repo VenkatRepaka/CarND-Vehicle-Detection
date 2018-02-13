@@ -12,9 +12,8 @@ pix_per_cell = dist_pickle["pix_per_cell"]
 cell_per_block = dist_pickle["cell_per_block"]
 spatial_size = dist_pickle["spatial_size"]
 hist_bins = dist_pickle["hist_bins"]
-y_start_stop = [400, 600]  # Min and max in y to search in slide_window()
-ystart = y_start_stop[0]
-ystop = y_start_stop[1]
+ystart = 400
+ystop = 600
 
 queued_boxes = collections.deque(maxlen=10)
 
