@@ -30,7 +30,7 @@ for img in test_images:
             hot_windows = hot_windows + find_cars(image, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell,
                                                   cell_per_block, spatial_size, hist_bins)
 
-    bbox_list, heatmap = process_bboxes(image, hot_windows, threshold=0, show_heatmap=True)
+    bbox_list, heatmap = process_bboxes(image, hot_windows, threshold=1, show_heatmap=True)
     draw_img = draw_car_boxes(image, bbox_list)
 
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
@@ -39,5 +39,4 @@ for img in test_images:
     ax1.set_title('Detections', fontsize=50)
     ax2.imshow(heatmap, cmap='hot')
     ax2.set_title('Heatmap', fontsize=50)
-    # plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
     plt.show()

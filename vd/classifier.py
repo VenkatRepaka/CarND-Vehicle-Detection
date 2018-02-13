@@ -18,7 +18,7 @@ pix_per_cell = 8
 cell_per_block = 2
 hog_channel = "ALL"  # Can be 0, 1, 2, or "ALL"
 spatial_size = (16, 16)  # Spatial binning dimensions
-hist_bins = 128   # Number of histogram bins
+hist_bins = 32   # Number of histogram bins
 spatial_feat = True  # Spatial features on or off
 hist_feat = True  # Histogram features on or off
 hog_feat = True  # HOG features on or off
@@ -44,8 +44,8 @@ rand_state = np.random.randint(0, 100)
 X_train, X_test, y_train, y_test = train_test_split(scaled_X, y, test_size=0.2, random_state=rand_state)
 
 init_svc = LinearSVC()
-init_svc.fit(X_train, y_train)
-print('Test Accuracy of SVC = ', round(init_svc.score(X_test, y_test), 4))
+# init_svc.fit(X_train, y_train)
+# print('Test Accuracy of SVC = ', round(init_svc.score(X_test, y_test), 4))
 
 # Penalty parameters
 penalty_parameters = np.logspace(-6, -1, 10)
