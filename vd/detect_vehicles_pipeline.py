@@ -31,7 +31,7 @@ def process_image(image):
             hot_windows = hot_windows + find_cars(image, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell,
                                                   cell_per_block, spatial_size, hist_bins)
     # Identify boxes using threshold to avoid false positives
-    bbox_list = process_bboxes(image, hot_windows, threshold=0, show_heatmap=False)
+    bbox_list = process_bboxes(image, hot_windows, threshold=1, show_heatmap=False)
     # Add to buffered list
     queued_boxes.append(bbox_list)
     # Get all queued boxes from last n frames
@@ -45,7 +45,7 @@ def process_image(image):
     return draw_img
 
 
-vid_output = './project_video_result.mp4'
-project_video = VideoFileClip('../project_video.mp4').subclip(10, 12)
+vid_output = '../project_video_result.mp4'
+project_video = VideoFileClip('../project_video.mp4')
 result_video = project_video.fl_image(process_image)
 result_video.write_videofile(vid_output, audio=False)
