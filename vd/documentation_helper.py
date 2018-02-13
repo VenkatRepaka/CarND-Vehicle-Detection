@@ -115,7 +115,7 @@ plt.show()
 # Search windows
 dist_pickle = pickle.load(open("./model_params.p", "rb"))
 svc = dist_pickle["svc"]
-scales = [1, 1.3, 1.5, 1.8, 2, 2.4, 2.5, 2.6, 2.7]
+scales = [1, 1.3, 1.5, 1.8, 2, 2.4]
 # test_image_path = glob.glob('../test_images/test1.jpg')
 test_image = mpimg.imread('../test_images/test1.jpg')
 for scale in scales:
