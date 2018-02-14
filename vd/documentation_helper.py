@@ -120,6 +120,22 @@ def show_scaled_features():
     plt.show()
 
 
+def show_predictions():
+    test_images = glob.glob('../test_images/*.jpg')
+    scales = [1, 1.3, 1.5, 1.8, 2, 2.4]
+    for test_image in test_images:
+        windows = []
+        for scale in scales:
+            test_image_image = mpimg.imread(test_image)
+            windows += find_cars(test_image_image, 400, 600, scale, svc, X_scaler, orient, pix_per_cell, cell_per_block,
+                                 spatial_size,
+                                 hist_bins, vis=False)
+        image = draw_boxes(test_image_image, windows, thick=6)
+        plt.imshow(image)
+        plt.savefig('../documentation/prediction_' + test_image.replace('../test_images\\', ''))
+        plt.show()
+
+
 def show_search_windows():
     # Search windows
     scales = [1, 1.3, 1.5, 1.8, 2, 2.4]
@@ -161,12 +177,13 @@ def show_heat_maps():
         ax1.set_title('Detections', fontsize=15)
         ax2.imshow(heatmap, cmap='hot')
         ax2.set_title('Heatmap', fontsize=15)
-        plt.savefig('../documentation' + img.replace('../test_images', '') + '_heatmap.jpg')
+        plt.savefig('../documentation/heatmap_' + img.replace('../test_images\\', ''))
         plt.show()
 
 
 color_space_image_spatial()
 show_hog_features()
 show_scaled_features()
+show_predictions()
 show_search_windows()
 show_heat_maps()
