@@ -46,6 +46,7 @@ I have used LinearSVC as classifier for the project. The training process is par
 The classifier data is stored in model_params.p using pickle.
 
 Below are the predictions of classifier with false positives on test images with ystart 400 and ystop 600 and scales 1, 1.3, 1.5, 1.8, 2, 2.4
+
 ![test1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test1.jpg)
 ![test2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test2.jpg)
 ![test3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test3.jpg)
@@ -55,29 +56,7 @@ Below are the predictions of classifier with false positives on test images with
 
 
 ### Image pipeline
-
-The ranges I have chosen for different scales
-~~~
-ystart = 360
-ystop = 560
-scale = 1.5
-
-ystart = 400
-ystop = 500
-scale = 1
-
-ystart = 400
-ystop = 600
-scale = 1.8
-
-ystart = 350
-ystop = 700
-scale = 2.5
-
-ystart = 350
-ystop = 700
-scale = 3
-~~~
+below are the images after removing false positives and applying heatmap
 
 ![heatmap1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test1.png)
 ![heatmap2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test2.png)
