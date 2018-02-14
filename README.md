@@ -86,11 +86,11 @@ below are the images after removing false positives and applying heatmap
 ### Code
 
 All of the code that is used can be found in the [vd](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/tree/master/vd) package
-[lecture_functions](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/lectures_functions.py)
-[classifier](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/classifier.py)
-[detect_vehicles](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/detect_vehicles.py)
-[detect_vehicles_pipeline](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/detect_vehicles_pipeline.py)
-[documentation](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/documentation_helper.py)
+1. [lecture_functions](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/lectures_functions.py)
+2. [classifier](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/classifier.py)
+3. [detect_vehicles](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/detect_vehicles.py)
+4. [detect_vehicles_pipeline](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/detect_vehicles_pipeline.py)
+5. [documentation](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/documentation_helper.py)
 
 #### Discussion
 Many of the bounding boxes are not completely enclosing the cars in the video. Changing the thresholding will help but this is increasing the false positives.
