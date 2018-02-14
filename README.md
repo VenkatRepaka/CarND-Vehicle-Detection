@@ -20,6 +20,11 @@ The code for loading the image data to train the classifier is present in classi
 Sample image of a car and a non car
 ![car_and_non_car](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/car_and_non_car.png)
 
+### Feature selection
+I have chosen features of YCrCb color space features and spatial binning of (32, 32)
+Below is a image showing the features
+![color_space_image_spatial](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/color_space_image_spatial.jpg)
+
 
 ### Hog Parameters
 Below are the final HOG parameters that I have chosen which gave the best accuracy.
@@ -28,28 +33,25 @@ Below are the final HOG parameters that I have chosen which gave the best accura
 |----------------|-----------|
 | Color Space    | YCrCb     |
 | Spatial Size   | 32 X 32   |
-| Histogram Bins | 32        |
+| Histogram Bins | 32/64/128 |
 | Hog Pixels     | 8         |
 | Hog Cells      | 2         |
 | Hog Channel    | ALL       |
 
-Below is a sample of a car and hog features
-![car_hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/car_hog.png)
-
-Below is a sample of a non car and hog features
-![car_hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/non_car_hog.png)
+Below is a sample of hog features for a car and non car
+![hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/hog_features.jpg)
 
 ### Classifier
-I have used LinearSVC as classifier for the project. The training process is part of [classifier.py](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vehicle_detection/classifier.py)
-The classifier data is stored in classifier.p using pickle.
+I have used LinearSVC as classifier for the project. The training process is part of [classifier.py](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/classifier.py)
+The classifier data is stored in model_params.p using pickle.
 
-Below are the predictions of classifier on test images with ystart 400, ystop 650 and scale 1.5
-![test1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test1.png)
-![test2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test2.png)
-![test3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test3.png)
-![test4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test4.png)
-![test5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test5.png)
-![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/classifier_test6.png)
+Below are the predictions of classifier with false positives on test images with ystart 400 and ystop 600 and scales 1, 1.3, 1.5, 1.8, 2, 2.4
+![test1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test1.jpg)
+![test2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test2.jpg)
+![test3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test3.jpg)
+![test4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test4.jpg)
+![test5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test5.jpg)
+![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test6.jpg)
 
 
 ### Image pipeline
