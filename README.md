@@ -55,10 +55,20 @@ Below are the predictions of classifier with false positives on test images with
 ![test6](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/prediction_test6.jpg)
 
 
+### Sliding windows
+Below are the example of sliding windows applied using scales 1, 1.3, 1.5, 1.8, 2, 2.4
+![scale1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_1.jpg)
+![scale1.3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_1.3.jpg)
+![scale1.5](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_1.5.jpg)
+![scale1.8](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_1.8.jpg)
+![scale2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_2.jpg)
+![scale2.4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scale_2.4.jpg)
+
+
 ### Image pipeline
 below are the images after removing false positives and applying heatmap
 
-![heatmap1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test1.png)
+![heatmap1](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test1.jpg)
 ![heatmap2](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test2.png)
 ![heatmap3](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test3.png)
 ![heatmap4](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/heatmap_test4.png)
