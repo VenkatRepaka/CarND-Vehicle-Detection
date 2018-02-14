@@ -79,5 +79,7 @@ below are the images after removing false positives and applying heatmap
 #### Discussion
 Many of the bounding boxes are not completely enclosing the cars in the video. Changing the thresholding will help but this is increasing the false positives.
 
-The speed of the process involved here is extremely slow.
+The speed of the process involved here is extremely slow. With the classifier I have used and the scales I have applied it takes 40 minutes to run completely.
+
+When two cars are very near the heat map is enclosing both the cars into one object.
 
