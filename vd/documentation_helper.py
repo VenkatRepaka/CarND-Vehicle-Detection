@@ -64,6 +64,7 @@ def color_space_image_spatial():
     ax9.set_title('YCrCb Non Car Spatial (32, 32)', fontsize=10)
     ax10.plot(non_car_bin_spatial)
     ax10.set_title('YCrCb Non Car Spatial (32, 32) features', fontsize=10)
+    plt.savefig('../documentation/color_space_image_spatial.jpg')
     plt.show()
 
 
@@ -85,6 +86,7 @@ def show_hog_features():
     ax5.set_title('Non Car Hog', fontsize=10)
     ax6.plot(non_car_hog_features)
     ax6.set_title('Non Car Hog Histogram', fontsize=10)
+    plt.savefig('../documentation/hog_features.jpg')
     plt.show()
 
 
@@ -114,6 +116,7 @@ def show_scaled_features():
     ax5.set_title('Non Car Raw', fontsize=10)
     ax6.plot(scaled_X[len(cars) + non_cars_index - 1])
     ax6.set_title('Non Car Scaled', fontsize=10)
+    plt.savefig('../documentation/scaled_features.jpg')
     plt.show()
 
 
@@ -128,6 +131,7 @@ def show_search_windows():
         image = draw_boxes(test_image, windows, thick=2)
         plt.imshow(image)
         plt.title('Scale ' + str(scale))
+        plt.savefig('../documentation/scale_' + str(scale) + '.jpg')
         plt.show()
 
 
@@ -151,17 +155,18 @@ def show_heat_maps():
         bbox_list, heatmap = process_bboxes(image, hot_windows, threshold=1, show_heatmap=True)
         draw_img = draw_car_boxes(image, bbox_list)
 
-        f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
+        f, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5.6))
         f.tight_layout()
         ax1.imshow(draw_img)
-        ax1.set_title('Detections', fontsize=50)
+        ax1.set_title('Detections', fontsize=15)
         ax2.imshow(heatmap, cmap='hot')
-        ax2.set_title('Heatmap', fontsize=50)
+        ax2.set_title('Heatmap', fontsize=15)
+        plt.savefig('../documentation' + img.replace('../test_images', '') + '_heatmap.jpg')
         plt.show()
 
 
 color_space_image_spatial()
 show_hog_features()
-# show_scaled_features()
+show_scaled_features()
 show_search_windows()
 show_heat_maps()
