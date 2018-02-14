@@ -41,6 +41,13 @@ Below are the final HOG parameters that I have chosen which gave the best accura
 Below is a sample of hog features for a car and non car
 ![hog_features](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/hog_features.jpg)
 
+
+### Scaling the features
+Below is image showing scaled features
+
+![scaled](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/documentation/scaled_features.jpg)
+
+
 ### Classifier
 I have used LinearSVC as classifier for the project. The training process is part of [classifier.py](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/vd/classifier.py)
 The classifier data is stored in model_params.p using pickle.
