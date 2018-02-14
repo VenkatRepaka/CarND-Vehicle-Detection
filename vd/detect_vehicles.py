@@ -19,7 +19,7 @@ ystop = 600
 
 for img in test_images:
     image = mpimg.imread(img)
-    scales = [1, 1.3, 1.5, 1.8, 2, 2.4, 3]
+    scales = [1, 1.3, 1.5, 1.8, 2, 2.4]
     hot_windows = None
     for scale in scales:
         if hot_windows is None:
