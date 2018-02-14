@@ -95,9 +95,14 @@ All of the code that is used can be found in the [vd](https://github.com/VenkatR
 The result video is [project_video_output](https://github.com/VenkatRepaka/CarND-Vehicle-Detection/blob/master/project_video_output.mp4)
 
 #### Discussion
+It took good amount of time in understanding and implementing sliding/scaling methods to search windows.
+
 Many of the bounding boxes are not completely enclosing the cars in the video. Changing the thresholding will help but this is increasing the false positives.
 
 The speed of the process involved here is extremely slow. With the classifier I have used and the scales I have applied it takes 40 minutes to run completely.
 
 When two cars are very near the heat map is enclosing both the cars into one object.
 
+I will have to explore to use deep learning model and apply here to detect vehicles
+
+Not all the features used are needed for classification. Will have to find a way to remove redundant sections in the features.
